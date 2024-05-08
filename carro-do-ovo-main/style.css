@@ -27,6 +27,7 @@ body {
    width: 100%;
    font-size: 32px;
 }
+
 .titulo-principal span{
    color: var(--verde);
 }
@@ -42,22 +43,31 @@ body {
    align-items: center;
    width: 100%;
    border-bottom: 4px solid var(--botao-ativo);
-   border-left: 4px solid var(--botao-ativo);
-   border-right: 4px solid var(--botao-ativo);
+   border-left: 2px solid var(--botao-ativo);
+   border-right: 2px solid var(--botao-ativo);
    border-top: none;
  }
 
- @media  screen and (min-width: 768px) {
+ .botao:first-child {
+   border-radius: 40px 0 0 0;
+ }
  .botoes {
-     display: flex;
+     display: block;
 }
 
+.ativo{
+   background-color: var(--botao-ativo);
+   border-bottom: 4px solid var(--verde);
+}
+
+@media  screen and (min-width: 768px) {
    .botoes{
-      display: block;
+      display: flex;
    }
    .botao:first-child {
-       border-radius: 40px 0 0 0;
+      border-radius: 40px 0 0 0;
    }
+
    .botao:last-child {
        border-radius: 0 40px 0 0;
    }
